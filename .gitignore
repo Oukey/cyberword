@@ -1,0 +1,5 @@
+/cyberword/conf/
+/env/
+*.pyc
+.idea
+*.sqlite3
