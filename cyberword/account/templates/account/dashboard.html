@@ -2,5 +2,9 @@
 {% block title %}Dashboard{% endblock %}
 {% block content %}
   <h1>Моя страница</h1>
-  <p>Добро пожаловать на вашу страницу.</p>
+  <p>Добро пожаловать на вашу страницу.
+      Вы можете <a href="{% url "edit" %}">изменить свой профиль</a> или
+      <a href="{% url "password_change" %}">изменить пароль</a>.
+  </p>
+
 {% endblock %}
