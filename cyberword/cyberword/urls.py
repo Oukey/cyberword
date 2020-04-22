@@ -22,6 +22,7 @@ urlpatterns = [
     path('', include('account.urls')),  # стартовая страница
     path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]
 
 # для локальной разработки!!!
