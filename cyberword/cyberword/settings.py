@@ -29,7 +29,7 @@ SECRET_KEY = config.get('main', 'SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config.get('main', 'Debug')
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']  # для локальной разработки!!!
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']  # список доменов для локальной разработки!!!
 
 
 # Application definition
@@ -137,4 +137,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # провер
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = config.get('social', 'SOCIAL_KEY')  # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = config.get('social', 'SOCIAL_SECRET')  # Facebook App Secret
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']

@@ -16,4 +16,9 @@
     </form>
     <p><a href="{% url "password_reset" %}">Забыли свой пароль?</a></p>
   </div>
+  <div class="social">
+    <ul>
+      <li class="facebook"><a href="{% url "social:begin" "facebook" %}"> Signin with Facebook</a></li>
+    </ul>
+  </div>
 {% endblock %}
